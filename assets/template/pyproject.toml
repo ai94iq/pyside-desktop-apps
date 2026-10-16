@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "__app__"
+dynamic = ["version"]
+description = "__App Name__"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = ["PySide6-Essentials>=6.12.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.1.1"]
+
+[project.gui-scripts]
+__app__ = "__app__.__main__:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "__app__.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
