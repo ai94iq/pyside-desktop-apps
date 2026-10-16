@@ -18,7 +18,7 @@ Code: `src/<package>/worker.py`; its use in `window.py` (`run`, `_finished`, `_f
 they run one at a time in submit order, so one slow resource (a socket, a device, a database file) is never
 used from two threads. A job's exception becomes `failed(job, text)`; it never reaches Qt.
 
-Signals cross threads as queued connections: the UI slot runs on the UI thread. Never touch a widget from a
+Never touch a widget from a
 job; return data and let the slot render it.
 
 ## Pending rows
