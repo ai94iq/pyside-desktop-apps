@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+dist/
+*.log
+tmp/
+.venv/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
