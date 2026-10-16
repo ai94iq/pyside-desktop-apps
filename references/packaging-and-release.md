@@ -40,6 +40,9 @@ tools (`TOOLS`) and the project, runs PyInstaller with `packaging/app.spec`, run
 - `EXCLUDES` drops Qt modules the app does not import (WebEngine, QML, Multimedia, PDF, Charts...); remove a
   line when the app starts using one. Add `hiddenimports` for modules imported by name at runtime.
 - `upx=False`: compressed executables trip antivirus scanners more often.
+- Linux builds on a host without a desktop (CI, WSL) warn "Library not found: libxcb-..." for Qt's X11
+  plugin, about 20 lines. Expected: those libraries come from the user's desktop (the release notes name
+  `libxcb-cursor0`, the one many systems lack). Any other "Library not found" is a real gap.
 
 Bump `TOOLS` to the latest PyInstaller and Pillow on purpose, in its own commit, with a CI run behind it.
 
