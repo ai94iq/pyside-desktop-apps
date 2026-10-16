@@ -1,4 +1,4 @@
-# Icons from Lucide (https://lucide.dev), lucide-static version 1.55.0, vendored unchanged apart from
+# Icons from Lucide (https://lucide.dev), lucide-static version 1.58.0, vendored unchanged apart from
 # whitespace. Lucide is licensed under the ISC license; its full license text follows.
 #
 # ISC License
@@ -48,7 +48,7 @@
 
 """Lucide outline icons as SVG bodies (stroke is set by icons.svg_bytes). Add more with the skill's add_icons.py."""
 
-LUCIDE_VERSION = "1.55.0"
+LUCIDE_VERSION = "1.58.0"
 
 ICONS = {
     "chevron-down": ('<path d="m6 9 6 6 6-6" />'),
