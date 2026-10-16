@@ -141,6 +141,11 @@ class UiTest(unittest.TestCase):
         self.assertEqual(self.window.theme_button.accessibleName(), "Theme")
         self.assertTrue(self.window.theme_action.toolTip())
 
+    def test_row_icons_match_the_text_size(self):
+        from __app__.icons import ICON_SIZE
+        self.assertEqual(self.window.items.iconSize(), ICON_SIZE)
+        self.assertEqual(self.window.log.iconSize(), ICON_SIZE)
+
     def test_labels_never_render_rich_text(self):
         from __app__.widgets import plain_label
         self.assertEqual(plain_label("<b>x</b>").textFormat(), Qt.TextFormat.PlainText)

@@ -83,6 +83,7 @@ list them in the README.
   selected `accent_soft` with `ink` text. A selection colored with clipped corners came from padding on
   `::item` without a radius; keep both.
 - A table that only displays values gets `NoSelection`.
+- Views that show icons in rows get `setIconSize(ICON_SIZE)`; Qt's default draws them far larger than the text.
 - Header sections: transparent, `ink2`, 12 px semibold, one `line` underline.
 - Tables in dark mode: outlines in `line`, never `ink3`; dark outlines were reported as too heavy.
 - A long list shows its count in a `chip` next to the title, not in grey text that gets lost.

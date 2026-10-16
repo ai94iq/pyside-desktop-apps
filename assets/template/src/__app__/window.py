@@ -47,6 +47,8 @@ class MainWindow(QMainWindow):
         self.items_stack.addWidget(self.items_empty)
         self.items_stack.addWidget(self.items)
         self.log = QListWidget()
+        for view in (self.items, self.log):
+            view.setIconSize(ICON_SIZE)            # Qt's default draws row icons far larger than the text
         self.count = plain_label("0", "chip")
         left = self._pane("Items", self.items_stack, self.count)
         right = self._pane("Activity", self.log)
